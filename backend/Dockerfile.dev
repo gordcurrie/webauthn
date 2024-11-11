@@ -1,0 +1,12 @@
+# Use an official Golang image as the base image
+FROM golang:1.23-alpine as builder
+
+# Set the current working directory in the container
+WORKDIR /app
+
+# Set the entrypoint to use Air for live reloading
+RUN go install github.com/air-verse/air@latest
+ENTRYPOINT ["air", "-c", "backend/.air.toml"]
+
+# Label the Dockerfile for development purposes
+LABEL stage=development
