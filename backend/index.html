@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebAuthn Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WebAuthn Test</h1>
+    </header>
+    <main>
+        <label for="username">Username:</label>
+        <input type="email" name="username" id="username" placeholder="test@test.com">
+        <button onclick="register()">Register</button>
+        <button onclick="login()">Login</button>
+    </main>
+    <footer>
+        <p>&copy; 2024 Gord Currie</p>
+    </footer>
+    <script>
+      function register() {
+        const input = document.getElementById('username');
+        const username =  input.value;
+        alert(username);
+      }
+
+      function login() {
+        alert("login");
+      }
+    </script>
+</body>
+</html>
